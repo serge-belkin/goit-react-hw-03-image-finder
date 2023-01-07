@@ -1,8 +1,8 @@
 import { PropTypes } from 'prop-types';
 import css from './ImageGalleryItem.module.css';
 
-export const ImageGalleryItem = ({ image, onModal }) => (
-  <li className={css.galleryItem} id={image.id} onClick={onModal}>
+export const ImageGalleryItem = ({ image, onClick }) => (
+  <li className={css.galleryItem} id={image.id} onClick={onClick}>
     <img
       src={image.webformatURL}
       alt={image.tags}
@@ -14,5 +14,5 @@ export const ImageGalleryItem = ({ image, onModal }) => (
 
 ImageGalleryItem.propTypes = {
   image: PropTypes.object.isRequired,
-  onModal: PropTypes.func.isRequired,
+  onClick:PropTypes.func.isRequired,
 };
