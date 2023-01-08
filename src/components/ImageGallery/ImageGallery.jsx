@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import css from './ImageGallery.module.css';
 
 export const ImageGallery = ({ images, onImgClick }) => (
-  <ul className={css.gallery}>
+  <ul className={css.ImageGallery}>
     {images.map((image, index) => (
       <ImageGalleryItem onClick={onImgClick} image={image} key={index} />
     ))}
